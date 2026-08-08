@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sare Saidy Lower Basic Cycle School | Building Bright Futures in The Gambia</title>
+  <meta name="description" content="Support the Sare Saidy Lower Basic Cycle School construction in Jarra West District, The Gambia. Building 4 safe classrooms, solar power, and clean water wells for community children.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <i class="fas fa-school"></i>
+        </div>
+        <div>
+          Sare Saidy <span>LBCS</span>
+        </div>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#timeline">Progress</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#sponsor">Donor Wall</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div style="display: flex; gap: 0.75rem; align-items: center;">
+        <button class="btn btn-primary" onclick="openModal('donate-modal')">
+          <i class="fas fa-heart"></i> Donate Now
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge badge-gold">
+          <i class="fas fa-map-marker-alt"></i> Jarra West District • Lower River Region
+        </div>
+        <h1>Building <span>Sare Saidy Lower Basic</span> Cycle School</h1>
+        <p>Constructing a modern, dedicated Lower Basic Cycle School in Sare Saidy village, providing safe primary education, solar-powered classrooms, and clean drinking water to over 150 eager young students.</p>
+        
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="openModal('donate-modal')">
+            <i class="fas fa-hand-holding-heart"></i> Donate to Construction
+          </button>
+          <button class="btn btn-outline" onclick="openModal('brick-modal')">
+            <i class="fas fa-cubes"></i> Sponsor a Brick ($25)
+          </button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>150+</h3>
+            <p>Future Students</p>
+          </div>
+          <div class="stat-item">
+            <h3>4</h3>
+            <p>Classroom Blocks</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Direct Community Impact</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-img-wrapper">
+          <img src="images/hero.png" alt="Sare Saidy Lower Basic Cycle School construction site in The Gambia">
+          <div class="live-tag">
+            <div class="pulse-dot"></div> Live Phase 3: Roofing Underway
+          </div>
+        </div>
+
+        <div class="fundraiser-widget">
+          <div class="fundraiser-header">
+            <div>
+              <span class="raised-amount">$16,400</span>
+              <span class="goal-amount">raised of $25,000 goal</span>
+            </div>
+            <span class="badge badge-primary">65% Funded</span>
+          </div>
+
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="hero-progress-bar"></div>
+          </div>
+
+          <div class="fundraiser-meta">
+            <span><i class="fas fa-users"></i> 142 Donors</span>
+            <span><i class="fas fa-tools"></i> Target: Roofing & Desks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       About & Story Section
+       ========================================================================== -->
+  <section id="about" class="section-padding">
+    <div class="container story-grid">
+      <div class="story-img-card">
+        <img src="images/community.png" alt="Sare Saidy village leaders and children in Jarra West District">
+        <div class="story-badge-floating">
+          <h4>Sare Saidy Village</h4>
+          <p>"Bringing accessible primary education home to Jarra West District."</p>
+        </div>
+      </div>
+
+      <div class="story-content">
+        <div class="badge badge-green">
+          <i class="fas fa-seedling"></i> Jarra West Education Initiative
+        </div>
+        <h2>Empowering Children in Sare Saidy Village</h2>
+        <p>Located in the <strong>Jarra West District</strong> of the Lower River Region (just 9.2 km from regional hub Mansa Konko), Sare Saidy is a vibrant rural farming community. Until now, young children had to walk long miles under intense sun to reach primary schools in neighboring settlements.</p>
+        <p><strong>Sare Saidy Lower Basic Cycle School (LBCS)</strong> is designed to change that forever. Built in close partnership with village elders, community organizer Lamin, and local master builders, the school will feature 4 weather-proof classroom blocks, solar ceiling fans, and a clean drinking water borehole.</p>
+
+        <div class="transparency-box">
+          <h4><i class="fas fa-shield-alt"></i> 100% Direct Non-Profit Guarantee</h4>
+          <p>Every dollar goes straight to physical construction materials (masonry cement, timber, corrugated roofing sheets) and fair local wages for Gambian builders. 0% administrative overhead.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Construction Timeline Section
+       ========================================================================== -->
+  <section id="timeline" class="section-padding timeline-section">
+    <div class="container">
+      <div class="text-center">
+        <div class="badge badge-primary">
+          <i class="fas fa-tasks"></i> Project Milestones
+        </div>
+        <h2 class="section-title">Building Sare Saidy LBCS</h2>
+        <p class="section-subtitle">Track real-time building milestones at the Sare Saidy site in Lower River Region.</p>
+      </div>
+
+      <div class="timeline-nav">
+        <button class="timeline-tab" data-phase="1">
+          <span class="phase-num">1</span> Phase 1: Land & Prep
+        </button>
+        <button class="timeline-tab" data-phase="2">
+          <span class="phase-num">2</span> Phase 2: Masonry
+        </button>
+        <button class="timeline-tab active" data-phase="3">
+          <span class="phase-num">3</span> Phase 3: Roofing & Windows
+        </button>
+        <button class="timeline-tab" data-phase="4">
+          <span class="phase-num">4</span> Phase 4: Desks & Solar
+        </button>
+      </div>
+
+      <div class="timeline-card">
+        <div class="timeline-card-content">
+          <span class="timeline-status status-progress" id="timeline-status">In Progress (65%)</span>
+          <h3 id="timeline-title">Phase 3: Roofing & Window Installation</h3>
+          <p id="timeline-desc">Currently mounting heavy-duty timber rafters and corrugated metal roof sheets to protect classrooms from rainy season weather, followed by window shutters and doors.</p>
+
+          <ul class="timeline-checklist" id="timeline-checklist">
+            <li><i class="fas fa-check-circle"></i> Timber roof truss structure constructed ✅</li>
+            <li><i class="fas fa-clock"></i> Metal roof sheet installation (In Progress 🏗️)</li>
+            <li><i class="fas fa-circle-notch"></i> Window frame installation & safety ironwork</li>
+            <li><i class="fas fa-circle-notch"></i> Exterior plastering & protective paint</li>
+          </ul>
+
+          <button class="btn btn-primary" onclick="openModal('donate-modal')">
+            <i class="fas fa-bolt"></i> Help Complete Roofing
+          </button>
+        </div>
+
+        <div class="timeline-img">
+          <img id="timeline-img" src="images/roof.png" alt="Construction Progress Phase">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Interactive Impact Calculator Section
+       ========================================================================== -->
+  <section id="impact" class="section-padding">
+    <div class="container">
+      <div class="text-center">
+        <div class="badge badge-gold">
+          <i class="fas fa-calculator"></i> Transparent Impact
+        </div>
+        <h2 class="section-title">See What Your Gift Builds</h2>
+        <p class="section-subtitle">Use the slider below to see how your contribution directly equips Sare Saidy Lower Basic Cycle School.</p>
+      </div>
+
+      <div class="calculator-card">
+        <div class="slider-container">
+          <div class="slider-header">Select your donation amount:</div>
+          <div class="slider-value" id="impact-amount-display">$120</div>
+          
+          <input type="range" id="impact-slider" min="15" max="1000" step="5" value="120" class="custom-range">
+
+          <div class="preset-buttons">
+            <button class="preset-btn" data-value="25">$25</button>
+            <button class="preset-btn" data-value="50">$50</button>
+            <button class="preset-btn active" data-value="120">$120</button>
+            <button class="preset-btn" data-value="250">$250</button>
+            <button class="preset-btn" data-value="500">$500</button>
+          </div>
+        </div>
+
+        <div class="impact-results-grid">
+          <div class="impact-result-item">
+            <div class="impact-result-icon">🧱</div>
+            <div class="impact-result-count" id="count-cement">8</div>
+            <div class="impact-result-label">Bags of Cement</div>
+          </div>
+          <div class="impact-result-item">
+            <div class="impact-result-icon">🪑</div>
+            <div class="impact-result-count" id="count-desk">3</div>
+            <div class="impact-result-label">Student Desks & Chairs</div>
+          </div>
+          <div class="impact-result-item">
+            <div class="impact-result-icon">🏠</div>
+            <div class="impact-result-count" id="count-roof">1</div>
+            <div class="impact-result-label">Metal Roof Sheet Unit</div>
+          </div>
+          <div class="impact-result-item">
+            <div class="impact-result-icon">☀️</div>
+            <div class="impact-result-count" id="count-solar">0</div>
+            <div class="impact-result-label">Solar Power Units</div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <button class="btn btn-primary" onclick="openModal('donate-modal')">
+            <i class="fas fa-heart"></i> Donate This Amount
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Sponsor a Brick & Virtual Donor Wall
+       ========================================================================== -->
+  <section id="sponsor" class="section-padding timeline-section">
+    <div class="container">
+      <div class="text-center">
+        <div class="badge badge-green">
+          <i class="fas fa-cubes"></i> Virtual Wall of Supporter Bricks
+        </div>
+        <h2 class="section-title">Sponsor a Brick for Sare Saidy LBCS</h2>
+        <p class="section-subtitle">For a $25 donation, engrave your name or a custom message on a virtual brick that stays permanently on the school’s digital wall of honor.</p>
+      </div>
+
+      <div class="brick-wall-container">
+        <div class="brick-actions">
+          <div>
+            <h3>🧱 142 Bricks Placed</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Join global supporters building Sare Saidy LBCS!</p>
+          </div>
+          <button class="btn btn-primary" onclick="openModal('brick-modal')">
+            <i class="fas fa-plus-circle"></i> Add Your Custom Brick ($25)
+          </button>
+        </div>
+
+        <div class="virtual-wall-grid" id="virtual-wall-grid">
+          <!-- Dynamically filled via JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Photo Gallery Section
+       ========================================================================== -->
+  <section id="gallery" class="section-padding">
+    <div class="container">
+      <div class="text-center">
+        <div class="badge badge-primary">
+          <i class="fas fa-camera"></i> Field Photos
+        </div>
+        <h2 class="section-title">Site Photos from Sare Saidy Village</h2>
+        <p class="section-subtitle">Explore real photos straight from the construction site in Jarra West District, The Gambia.</p>
+      </div>
+
+      <div class="gallery-filter">
+        <button class="filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn" data-filter="construction">Construction Progress</button>
+        <button class="filter-btn" data-filter="community">Sare Saidy Community</button>
+        <button class="filter-btn" data-filter="vision">Architectural Vision</button>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Dynamically rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Contact & Volunteer Section
+       ========================================================================== -->
+  <section id="contact" class="section-padding timeline-section">
+    <div class="container">
+      <div class="text-center">
+        <div class="badge badge-gold">
+          <i class="fas fa-envelope"></i> Get in Touch
+        </div>
+        <h2 class="section-title">Connect with Sare Saidy LBCS Team</h2>
+        <p class="section-subtitle">Have questions about donations, corporate sponsorship, or visiting Sare Saidy village?</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-card">
+          <h3>Contact & Location Info</h3>
+          <p style="color: var(--text-muted); margin-bottom: 2rem;">Reach out to our project organizers directly. We respond to all inquiries within 24 hours.</p>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-text">
+              <h4>School Site Location</h4>
+              <p>Sare Saidy Village, Jarra West District, Lower River Region (9.2 km from Mansa Konko), The Gambia</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-text">
+              <h4>Email Inquiry</h4>
+              <p>info@saresaidy-school.org</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="contact-text">
+              <h4>Project Hotline (WhatsApp)</h4>
+              <p>+220 778 9412 (Gambia) / +44 20 7946 0912 (International)</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-hands-helping"></i></div>
+            <div class="contact-text">
+              <h4>Volunteer Trips</h4>
+              <p>Teaching aid, educational materials delivery, and solar installation assistance trips in Jarra West.</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <h3>Send a Message</h3>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Fill in your details below:</p>
+
+          <div class="form-group">
+            <label for="contact-name">Your Full Name</label>
+            <input type="text" id="contact-name" class="form-control" placeholder="e.g. Jane Doe" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" class="form-control" placeholder="jane@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-subject">Inquiry Type</label>
+            <select id="contact-subject" class="form-control">
+              <option>General Donation Inquiry</option>
+              <option>Sponsor a Classroom ($500+)</option>
+              <option>Volunteer Trip to Sare Saidy</option>
+              <option>Material / Book Donation</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" class="form-control" placeholder="How can we help or partner with you for Sare Saidy LBCS?" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer Section
+       ========================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo" style="color: #FFF;">
+            <div class="logo-icon"><i class="fas fa-school"></i></div>
+            <div>Sare Saidy <span style="color: var(--secondary);">LBCS</span></div>
+          </a>
+          <p>Sare Saidy Lower Basic Cycle School is a community charity project constructing 4 classroom blocks, solar energy, and clean water wells for youth in Jarra West District, Lower River Region, The Gambia.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About School</a></li>
+            <li><a href="#timeline">Building Progress</a></li>
+            <li><a href="#impact">Impact Calculator</a></li>
+            <li><a href="#sponsor">Donor Wall</a></li>
+            <li><a href="#gallery">Field Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="openModal('donate-modal')">Donate Now</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('brick-modal')">Sponsor a Brick</a></li>
+            <li><a href="#contact">Volunteer Trip</a></li>
+            <li><a href="#contact">Corporate Partnership</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Stay Updated</h4>
+          <p style="color: #9CA3AF; font-size: 0.85rem; margin-bottom: 1rem;">Subscribe for construction photos & updates:</p>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="Your email" class="form-control" style="background: #1F2937; border-color: #374151; color: #FFF; font-size: 0.85rem;">
+            <button class="btn btn-primary" style="padding: 0.5rem 1rem;"><i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Sare Saidy Lower Basic Cycle School Charity Project. All rights reserved.</div>
+        <div>Jarra West District • Lower River Region • The Gambia</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS
+       ========================================================================== -->
+
+  <!-- Main Donation Modal -->
+  <div class="modal-backdrop" id="donate-modal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('donate-modal')">&times;</button>
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <span class="badge badge-primary"><i class="fas fa-heart"></i> Direct Impact</span>
+        <h3 style="font-size: 1.75rem; margin-top: 0.5rem;">Donate to Sare Saidy LBCS</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Choose an amount to help complete Phase 3 roofing & classroom desks.</p>
+      </div>
+
+      <form id="main-donation-form">
+        <div class="donation-grid">
+          <div class="donation-option" data-amount="25">$25</div>
+          <div class="donation-option active" data-amount="50">$50</div>
+          <div class="donation-option" data-amount="120">$120</div>
+          <div class="donation-option" data-amount="250">$250</div>
+          <div class="donation-option" data-amount="500">$500</div>
+          <div class="donation-option" data-amount="1000">$1000</div>
+        </div>
+
+        <div class="form-group">
+          <label>Custom Donation Amount ($USD)</label>
+          <input type="number" id="custom-donation-amount" class="form-control" value="50" min="5" required>
+        </div>
+
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" class="form-control" placeholder="e.g. Alex Smith" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address for Receipt</label>
+          <input type="email" class="form-control" placeholder="alex@example.com" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+          <i class="fas fa-lock"></i> Complete Simulated Donation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sponsor a Brick Modal -->
+  <div class="modal-backdrop" id="brick-modal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('brick-modal')">&times;</button>
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <span class="badge badge-gold">🧱 Brick Wall Honor</span>
+        <h3 style="font-size: 1.75rem; margin-top: 0.5rem;">Sponsor a Brick for Sare Saidy</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Your custom brick will be displayed permanently on our digital donor wall!</p>
+      </div>
+
+      <form id="brick-sponsor-form">
+        <div class="form-group">
+          <label for="brick-donor-name">Name on Brick</label>
+          <input type="text" id="brick-donor-name" class="form-control" placeholder="e.g. The Taylor Family" required>
+        </div>
+
+        <div class="form-group">
+          <label for="brick-donor-msg">Custom Short Message / Quote</label>
+          <input type="text" id="brick-donor-msg" class="form-control" placeholder="e.g. Wishing Sare Saidy bright futures!" maxlength="50">
+        </div>
+
+        <div class="form-group">
+          <label for="brick-donor-tier">Brick Tier & Contribution</label>
+          <select id="brick-donor-tier" class="form-control">
+            <option value="standard">Standard Brick ($25)</option>
+            <option value="gold">Gold Sponsor Brick ($100)</option>
+            <option value="platinum">Platinum Foundation Brick ($500)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+          <i class="fas fa-cubes"></i> Place My Brick on Wall
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Receipt Thank You Modal -->
+  <div class="modal-backdrop" id="receipt-modal">
+    <div class="modal-card text-center">
+      <button class="modal-close" onclick="closeModal('receipt-modal')">&times;</button>
+      <div style="width: 64px; height: 64px; background: var(--accent-green-light); color: var(--accent-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1rem;">
+        <i class="fas fa-check"></i>
+      </div>
+      <h3 style="font-size: 1.8rem;">A-Baraka! Thank You!</h3>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Your generous contribution of <strong id="receipt-amount" style="color: var(--primary);">$50</strong> has been received for Sare Saidy Lower Basic Cycle School.</p>
+
+      <div style="background: var(--bg-alt); padding: 1.25rem; border-radius: var(--radius-md); text-align: left; margin-bottom: 1.5rem; font-size: 0.9rem;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+          <span style="color: var(--text-muted);">Receipt ID:</span>
+          <strong>SARE-SAIDY-2026-8492</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+          <span style="color: var(--text-muted);">Location:</span>
+          <strong>Sare Saidy, Jarra West District</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+          <span style="color: var(--text-muted);">Allocation:</span>
+          <strong>100% Phase 3 Roofing & Desks</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <span style="color: var(--text-muted);">Status:</span>
+          <strong style="color: var(--accent-green);">Confirmed & Allocated</strong>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" onclick="closeModal('receipt-modal')" style="width: 100%;">
+        Done & Return to Site
+      </button>
+    </div>
+  </div>
+
+  <!-- Fullscreen Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeModal('lightbox-modal')">&times;</button>
+      <img id="lightbox-img" src="" alt="Full view">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
