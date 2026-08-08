@@ -18,7 +18,35 @@ document.addEventListener('DOMContentLoaded', () => {
 function initNavbar() {
   const navbar = document.querySelector('.navbar');
   const navLinks = document.querySelectorAll('.nav-links a');
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const navLinksContainer = document.querySelector('.nav-links');
   
+  // Mobile Hamburger Toggle
+  if (mobileToggle && navLinksContainer) {
+    mobileToggle.addEventListener('click', () => {
+      navLinksContainer.classList.toggle('active');
+      const icon = mobileToggle.querySelector('i');
+      if (icon) {
+        if (navLinksContainer.classList.contains('active')) {
+          icon.className = 'fas fa-times';
+        } else {
+          icon.className = 'fas fa-bars';
+        }
+      }
+    });
+
+    // Close menu when clicking a link
+    navLinksContainer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinksContainer.classList.remove('active');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) {
+          icon.className = 'fas fa-bars';
+        }
+      });
+    });
+  }
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) {
       navbar.classList.add('scrolled');
@@ -196,7 +224,6 @@ function initImpactCalculator() {
 }
 
 /* 5. Sponsor a Brick & Virtual Donor Wall */
-// Start clean for live campaign launch
 const initialDonors = [
   { name: "Sare Saidy Community", msg: "Foundation Brick #1", tier: "platinum" }
 ];
@@ -248,17 +275,49 @@ function initDonorWall() {
 }
 
 /* 6. Photo Gallery & Lightbox */
-/**
- * TIP: You can easily add your own photos!
- * Simply place your image files (e.g. photo1.jpg) into the 'images/' folder
- * and add a new entry to the galleryData array below.
- */
 const galleryData = [
-  { src: "images/hero.png", title: "Sare Saidy Masonry Block", category: "construction", caption: "Local builders completing red brick classroom walls under the Gambian sun." },
-  { src: "images/roof.png", title: "Classroom Roof Framing", category: "construction", caption: "Skilled carpenters fitting sturdy metal roof sheets to protect against heavy rains." },
-  { src: "images/community.png", title: "Sare Saidy Village Community", category: "community", caption: "Village leaders, elders, and future students gathered at the school site." },
-  { src: "images/classroom.png", title: "Future Classroom Design", category: "vision", caption: "Architectural visualizer showing finished bright wooden desks and solar fans." },
-  { src: "images/solar.png", title: "Solar & Clean Water Site", category: "vision", caption: "Eco-friendly solar panel array and clean drinking water pump borehole for Sare Saidy." }
+  { 
+    src: "images/schoolkids.jpg", 
+    title: "Sare Saidy Primary Students", 
+    category: "community", 
+    caption: "Authentic field photograph of students outside Sare Saidy Lower Basic Cycle School in Jarra West District." 
+  },
+  { 
+    src: "images/schoolkids2.jpg", 
+    title: "Sare Saidy Community & Youth", 
+    category: "community", 
+    caption: "Children and local community members gathered at the Sare Saidy school construction site." 
+  },
+  { 
+    src: "images/schoolkids3.jpg", 
+    title: "Classroom Learning & Hope", 
+    category: "community", 
+    caption: "Real photo from Sare Saidy Lower Basic Cycle School showing eager young students." 
+  },
+  { 
+    src: "images/roof.png", 
+    title: "Classroom Roof Framing", 
+    category: "construction", 
+    caption: "Skilled carpenters fitting sturdy metal roof sheets to protect against heavy rains." 
+  },
+  { 
+    src: "images/hero.png", 
+    title: "Sare Saidy Masonry Block", 
+    category: "construction", 
+    caption: "Local builders completing red brick classroom walls under the Gambian sun." 
+  },
+  { 
+    src: "images/classroom.png", 
+    title: "Future Classroom Design", 
+    category: "vision", 
+    caption: "Architectural visualizer showing finished bright wooden desks and solar fans." 
+  },
+  { 
+    src: "images/solar.png", 
+    title: "Solar & Clean Water Site", 
+    category: "vision", 
+    caption: "Eco-friendly solar panel array and clean drinking water pump borehole for Sare Saidy." 
+  }
 ];
 
 function initGallery() {
