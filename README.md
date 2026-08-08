@@ -12,19 +12,39 @@
 
 **Sare Saidy Lower Basic Cycle School (LBCS)** is a grassroots community charity project building a permanent 4-classroom primary school block in Sare Saidy village. 
 
-Located in the Jarra West District (approximately 9.2 km from the regional capital of Mansa Konko), the school provides safe primary education, solar-powered lighting, and clean drinking water to over 150 local children who previously had to trek long miles across district highways to attend primary school.
+Located in the Jarra West District (approximately 9.2 km from the regional capital of Mansa Konko), the school provides safe primary education, solar-powered lighting, and clean drinking water to over 150 local children.
+
+---
+
+## 📸 Adding Your Own Real Photos
+
+You can easily replace or add your own photos of the construction site and village!
+
+1. Place your image files (e.g. `building.jpg`, `children.jpg`) into the [`images/`](file:///g:/Documents/github/gambia_school/images/) directory.
+2. Open [`script.js`](file:///g:/Documents/github/gambia_school/script.js) and update the `galleryData` list with your file names and captions:
+```javascript
+const galleryData = [
+  { 
+    src: "images/building.jpg", 
+    title: "Ground Foundation Work", 
+    category: "construction", 
+    caption: "Local builders preparing the foundation in Sare Saidy." 
+  },
+  // Add more entries here!
+];
+```
+3. Or replace existing files (`hero.png`, `roof.png`, `community.png`, `classroom.png`, `solar.png`) directly in the `images/` folder!
 
 ---
 
 ## 🚀 Website Features & Interactive Widgets
 
-- **Hero & Live Progress Tracker**: Dynamic progress bar showing **$16,400 raised of $25,000 goal** for Phase 3 Roofing with live fundraising metrics.
-- **Interactive Building Timeline**: 4-phase milestone tracker (Land & Prep, Masonry, Roofing & Windows, Desks & Solar) detailing progress and photo updates.
-- **Impact Calculator**: Interactive slider ($15 to $1,000) displaying real-time equipment output (Cement Bags, Wooden Desks, Metal Roof Sheets, Solar Units).
-- **Virtual Donor Wall ("Sponsor a Brick")**: Interactive brick donor wall where supporters can dedicate custom engraved virtual bricks.
+- **Hero & Live Progress Tracker**: Dynamic progress bar showing **0 € raised of 25,000 € goal** for campaign launch.
+- **Interactive Building Timeline**: 4-phase milestone tracker (Land & Prep, Masonry, Roofing & Windows, Desks & Solar).
+- **Impact Calculator**: Interactive slider (15 € to 1,000 €) displaying real-time equipment output (Cement Bags, Wooden Desks, Metal Roof Sheets, Solar Units).
+- **Virtual Donor Wall ("Sponsor a Brick")**: Interactive brick donor wall where supporters can dedicate custom engraved virtual bricks for 25 €.
 - **Field Photo Gallery & Fullscreen Lightbox**: Categorized site photos (Construction, Village Community, Architectural Vision) with full-screen lightbox modal.
 - **Simulated Donation & Receipt Generator**: Interactive donation modal with custom receipt confirmation (*"A-Baraka! Thank You!"*).
-- **Volunteer & Inquiry Form**: Direct contact interface for volunteer trips and material sponsorship.
 
 ---
 
@@ -32,11 +52,11 @@ Located in the Jarra West District (approximately 9.2 km from the regional capit
 
 ```text
 gambia_school/
-├── index.html        # Semantic HTML5 document with modals & structured markup
-├── styles.css        # Custom CSS design system, typography, animations & dark/light elements
+├── index.html        # Semantic HTML5 document with EUR currency formatting
+├── styles.css        # Custom CSS design system, typography & responsive layouts
 ├── script.js        # Interactive logic (calculators, modals, donor wall, lightbox)
 ├── LICENSE           # MIT Open Source License
-├── README.md         # Project documentation & setup guide
+├── README.md         # Project documentation & custom photo setup guide
 └── images/
     ├── hero.png      # School construction site hero photo
     ├── roof.png      # Roofing phase progress photo
@@ -51,7 +71,7 @@ gambia_school/
 
 You can publish this website live on the internet for free using **GitHub Pages**:
 
-1. Create a new public repository on [GitHub](https://github.com/new) named `gambia_school` (or your preferred name).
+1. Create a new public repository on [GitHub](https://github.com/new) named `gambia_school`.
 2. Push this directory to your repository.
 3. In your GitHub repository settings:
    - Go to **Settings** ⚙️ > **Pages**.

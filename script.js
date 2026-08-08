@@ -51,7 +51,7 @@ function initFundraiserCounter() {
   const progressBar = document.getElementById('hero-progress-bar');
   if (progressBar) {
     setTimeout(() => {
-      progressBar.style.width = '65.6%'; // $16,400 of $25,000
+      progressBar.style.width = '0%'; // Starting campaign at 0 €
     }, 300);
   }
 }
@@ -59,7 +59,7 @@ function initFundraiserCounter() {
 /* 3. Construction Timeline Switcher */
 const timelineData = {
   1: {
-    title: "Phase 1: Land & Permits in Sare Saidy",
+    title: "Phase 1: Land & Prep in Sare Saidy",
     status: "Completed",
     statusClass: "status-completed",
     description: "Secured official community land allocation in Sare Saidy village (Jarra West District), conducted site topographical survey, and cleared ground soil for foundation digging.",
@@ -86,7 +86,7 @@ const timelineData = {
   },
   3: {
     title: "Phase 3: Roofing & Window Installation",
-    status: "In Progress (65%)",
+    status: "Active Phase",
     statusClass: "status-progress",
     description: "Currently mounting heavy-duty timber rafters and corrugated metal roof sheets to protect Sare Saidy classrooms from rainy season weather, followed by window shutters and doors.",
     checklist: [
@@ -156,10 +156,10 @@ function initImpactCalculator() {
 
   function updateImpact(value) {
     const val = parseInt(value, 10);
-    amountDisplay.textContent = `$${val}`;
+    amountDisplay.textContent = `${val} €`;
 
-    // Calculation formulas based on cost items
-    // Cement Bag = $15, Desk = $35, Roof Sheet = $120, Solar Unit = $500
+    // Calculation formulas based on cost items in Euros (€)
+    // Cement Bag = 15 €, Desk = 35 €, Roof Sheet = 120 €, Solar Unit = 500 €
     const cement = Math.floor(val / 15);
     const desk = Math.floor(val / 35);
     const roof = Math.floor(val / 120);
@@ -196,22 +196,20 @@ function initImpactCalculator() {
 }
 
 /* 5. Sponsor a Brick & Virtual Donor Wall */
+// Start clean for live campaign launch
 const initialDonors = [
-  { name: "Sarah M.", msg: "For bright futures in Sare Saidy!", tier: "gold" },
-  { name: "John & Ellen K.", msg: "Warm wishes from London to Jarra West", tier: "standard" },
-  { name: "Sare Saidy Community", msg: "Foundation Brick #1", tier: "platinum" },
-  { name: "The Jenkins Family", msg: "God bless the children of Sare Saidy", tier: "standard" },
-  { name: "Kaddy & Friends", msg: "Education brings light", tier: "gold" },
-  { name: "Marcus Thorne", msg: "In memory of Grandfather David", tier: "platinum" },
-  { name: "Anonymous Donor", msg: "Keep building hope!", tier: "standard" },
-  { name: "Lower River Region Friends", msg: "Together we rise", tier: "standard" },
-  { name: "Dr. Aris Thorne", msg: "Supporting solar power for Sare Saidy LBCS", tier: "platinum" }
+  { name: "Sare Saidy Community", msg: "Foundation Brick #1", tier: "platinum" }
 ];
 
 function initDonorWall() {
   const wallGrid = document.getElementById('virtual-wall-grid');
+  const donorTitle = document.getElementById('donor-wall-title');
   
   function renderBricks() {
+    if (donorTitle) {
+      donorTitle.textContent = `🧱 ${initialDonors.length} Brick${initialDonors.length === 1 ? '' : 's'} Placed`;
+    }
+
     wallGrid.innerHTML = initialDonors.map(donor => `
       <div class="donor-brick ${donor.tier}-brick">
         <div class="brick-name">${escapeHtml(donor.name)}</div>
@@ -250,6 +248,11 @@ function initDonorWall() {
 }
 
 /* 6. Photo Gallery & Lightbox */
+/**
+ * TIP: You can easily add your own photos!
+ * Simply place your image files (e.g. photo1.jpg) into the 'images/' folder
+ * and add a new entry to the galleryData array below.
+ */
 const galleryData = [
   { src: "images/hero.png", title: "Sare Saidy Masonry Block", category: "construction", caption: "Local builders completing red brick classroom walls under the Gambian sun." },
   { src: "images/roof.png", title: "Classroom Roof Framing", category: "construction", caption: "Skilled carpenters fitting sturdy metal roof sheets to protect against heavy rains." },
@@ -338,7 +341,7 @@ function initModals() {
       closeModal('donate-modal');
       
       // Open thank you receipt modal
-      document.getElementById('receipt-amount').textContent = `$${amount}`;
+      document.getElementById('receipt-amount').textContent = `${amount} €`;
       openModal('receipt-modal');
     });
   }
